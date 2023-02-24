@@ -279,6 +279,7 @@ body {
   background-image: url('https://pbs.twimg.com/media/Fa4ePbnVQAAcfjM?format=jpg&name=4096x4096');
   background-repeat: no-repeat;
   background-position-x: center;
+  background-color: rgb(168, 141, 139);
 }
 
 .overlay {
@@ -297,8 +298,8 @@ h1 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
   gap: 16px;
+  grid-auto-flow: row;
 }
 
 .card {
@@ -328,10 +329,36 @@ h1 {
   width: 100%;
 }
 
-.card span {
-  font-size: .9rem;
+.card h2 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.15rem;
 }
 
 .card p {
   margin: 8px 0;
+  font-size: .9rem;
+}
+
+.card span {
+  font-size: .8rem;
+}
+
+@media (min-width: 600px) { 
+  .cards {
+    grid-template-columns: repeat(auto-fill, 400px);
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .card span {
+    font-size: .9rem;
+  }
 }
