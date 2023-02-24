@@ -3,9 +3,20 @@
   "name": "D2 Dashboard",
   "icons": [
     {
-      "src": "/icon.svg",
-      "type": "image/svg+xml",
-      "sizes": "512x512"
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "id": "/?source=pwa",
@@ -20,14 +31,24 @@
       "short_name": "Today",
       "description": "View weather information for today",
       "url": "/today?source=pwa",
-      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "How's weather tomorrow?",
       "short_name": "Tomorrow",
       "description": "View weather information for tomorrow",
       "url": "/tomorrow?source=pwa",
-      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
