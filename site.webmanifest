@@ -1,11 +1,33 @@
 {
   "short_name": "D2 Dashboard",
   "name": "D2 Dashboard",
-  "icons": [{
-    "src": "icon.svg",
-    "type": "image/svg+xml"
-  }],
-  "start_url": "/?utm_source=homescreen",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "scope": "/",
   "background_color": "#A88E8B",
-  "theme_color": "#A88E8B"
+  "theme_color": "#A88E8B",
+  "shortcuts": [
+    {
+      "name": "How's weather today?",
+      "short_name": "Today",
+      "description": "View weather information for today",
+      "url": "/today?source=pwa",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "How's weather tomorrow?",
+      "short_name": "Tomorrow",
+      "description": "View weather information for tomorrow",
+      "url": "/tomorrow?source=pwa",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    }
+  ]
 }
