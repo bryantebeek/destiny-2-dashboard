@@ -1,10 +1,10 @@
 {
-  "name": " ",
+  "name": "destiny-2-dashboard",
   "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "description": "A dashboard for Destiny 2 with links to all different useful tools.",
+  "keywords": ["Destiny 2", "Dashboard"],
+  "license": "MIT",
+  "author": "Bryan te Beek",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
@@ -12,6 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@parcel/transformer-webmanifest": "^2.8.3",
     "parcel-bundler": "^1.12.4"
   }
 }
