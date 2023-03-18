@@ -34,7 +34,7 @@ p {
   background-color: rgba(0,0,0,0.3);
 }
 
-.nav {
+.navigation {
   width: 100%;
   height: 40px;
   background-color: rgba(0 0 0 / 50%);
@@ -47,7 +47,7 @@ p {
   grid-auto-flow: column;
 }
 
-.nav button {
+.navigation button {
   outline: none;
   background: none;
   border: 0;
@@ -55,13 +55,13 @@ p {
   height: 40px;
 }
 
-.nav button:hover {
+.navigation button:hover {
   cursor: pointer;
   border-bottom: 3px solid white;
   margin-bottom: -3px;
 }
 
-.nav button.active {
+.navigation button.active {
   border-bottom: 3px solid white;
   margin-bottom: -3px;
 }
