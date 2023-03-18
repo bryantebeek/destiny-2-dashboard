@@ -12,7 +12,7 @@ body {
   background-image: url('/img/background.webp');
   /* background-image: url('https://pbs.twimg.com/media/Fa4ePbnVQAAcfjM?format=jpg&name=4096x4096'); */
   background-repeat: no-repeat;
-  background-position: 89% top;
+  background-position: 100% 50px;
   background-size: 170% auto;
 }
 
