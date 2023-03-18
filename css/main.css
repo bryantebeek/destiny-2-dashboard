@@ -44,7 +44,7 @@ p {
 
 .navigation {
   height: 50px;
-  background-color: rgba(0 0 0 / 50%);
+  background-color: #101419;
   display: grid;
   column-gap: 16px;
   text-transform: uppercase;
