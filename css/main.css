@@ -171,7 +171,7 @@ p {
   .navigation {
     justify-content: center;
   }
-  
+
   .cards {
     grid-template-columns: repeat(auto-fill, 400px);
     justify-content: center;
@@ -188,5 +188,5 @@ p {
 .footer p {
   color: rgba(255, 255, 255, 0.6);
   font-size: .8rem;
-  margin: 4px 0 24px;
+  margin: 8px 0 24px;
 }
