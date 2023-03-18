@@ -51,7 +51,7 @@ p {
   align-items: center;
   grid-auto-flow: column;
   overflow-x: auto;
-  margin-bottom: 16px;
+  overflow-y: hidden;
 }
 
 .navigation button {
@@ -60,7 +60,7 @@ p {
   border: 0;
   color: white;
   font-size: 14px;
-  height: 50px;
+  height: 100%;
   padding: 0 16px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -77,6 +77,29 @@ p {
   margin-bottom: -3px;
 }
 
+.navigation.subnavigation {
+  height: 30px;
+  background-color: #101419;
+  opacity: 0.9;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.navigation.subnavigation button {
+  font-size: 12px;
+  height: 30px;
+}
+
+.navigation.subnavigation button:hover {
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  margin-bottom: -2px;
+}
+
+.navigation.subnavigation button.active {
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+}
+
 .content {
   position: relative;
   z-index: 1;
@@ -87,12 +110,9 @@ p {
 }
 
 .tab {
-  display: grid;
-  justify-items: center;
-  align-items: start;
-  align-content: start;
-  padding: 0 16px;
   height: 100%;
+  display: grid;
+  align-content: start;
 }
 
 .tab h1 {
@@ -101,6 +121,14 @@ p {
 
 .tab p {
   margin-bottom: 24px;
+}
+
+.tab-content {
+  display: grid;
+  align-items: start;
+  align-content: start;
+  justify-items: center;
+  padding: 0 16px;
 }
 
 .cards + h1 {
