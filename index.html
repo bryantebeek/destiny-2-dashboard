@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  
+
   <title>D2 Dashboard</title>
-  <meta name="description" content="An overview of the communities best tools to improve your Destiny 2 playing experience.">
+  <meta name="description"
+    content="An overview of the communities best tools to improve your Destiny 2 playing experience.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
@@ -23,120 +24,170 @@
 <body>
   <div class="overlay"></div>
 
-  <div class="content">
-    <h1>Destiny 2 Dashboard</h1>
+  <div class="content" x-data="{ tab: 'dashboard' }">
+    <nav class="nav">
+      <button 
+        x-on:click="tab = 'dashboard'" 
+        x-bind:class="tab === 'dashboard' ? 'active' : ''">
+        Dashboard
+      </button>
 
-    <div class="cards">
-      <a href="https://app.destinyitemmanager.com" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
+      <button 
+        x-on:click="tab = 'rootofnightmares'" 
+        x-bind:class="tab === 'rootofnightmares' ? 'active' : ''">
+        Root of Nightmares
+      </button>
+    </nav>
+
+    <div class="tab" x-show="tab === 'dashboard'">
+      <h1>Destiny 2</h1>
+
+      <div class="cards">
+        <a href="https://app.destinyitemmanager.com" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
             <img src="https://destinyitemmanager.com/favicon-96x96.png" />
             <h2>Inventory Management</h2>
-        </div>
+          </div>
 
-        <p>Swap items, check stats, and build the loadout to Become Legend with Destiny Item Manager.</p>
-        <span>https://app.destinyitemmanager.com</span>
-      </a>
+          <p>Swap items, check stats, and build the loadout to Become Legend with Destiny Item Manager.</p>
+          <span>https://app.destinyitemmanager.com</span>
+        </a>
 
-      <a href="https://todayindestiny.com" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://www.media.todayindestiny.com/images/meta/apple-touch-icon-76x76.png" />
-          <h2>Today</h2>
-        </div>
+        <a href="https://todayindestiny.com" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <img src="https://www.media.todayindestiny.com/images/meta/apple-touch-icon-76x76.png" />
+            <h2>Today</h2>
+          </div>
 
-        <p>Get an overview of all rotating events for today.</p>
-        <span>https://todayindestiny.com</span>
-      </a>
+          <p>Get an overview of all rotating events for today.</p>
+          <span>https://todayindestiny.com</span>
+        </a>
 
-      <a href="https://d2armorpicker.com" target="_blank" rel="noreferrer external" class="card">
-        <h2>Stat / Build Optimization</h2>
-        <p>Create and manage stat optimised gear loadouts.</p>
-        <span>https://d2armorpicker.com</span>
-      </a>
+        <a href="https://d2armorpicker.com" target="_blank" rel="noreferrer external" class="card">
+          <h2>Stat / Build Optimization</h2>
+          <p>Create and manage stat optimised gear loadouts.</p>
+          <span>https://d2armorpicker.com</span>
+        </a>
 
-      <a href="https://engram.blue/crafting" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://engram.blue/assets/blue-engram.d68a54fa.png" />
-          <h2>Crafting progression</h2>
-        </div>
+        <a href="https://engram.blue/crafting" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <img src="https://engram.blue/assets/blue-engram.d68a54fa.png" />
+            <h2>Crafting progression</h2>
+          </div>
 
-        <p>Check craftable weapons pattern and leveling progress.</p>
-        <span>https://engram.blue/crafting</span>
-      </a>
+          <p>Check craftable weapons pattern and leveling progress.</p>
+          <span>https://engram.blue/crafting</span>
+        </a>
 
-      <a href="https://www.light.gg/god-roll/roll-appraiser/" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://www.light.gg/cdn-cgi/image/w=75,h=75/Content/Images/new-icon.png" />
-          <h2>Roll appraiser</h2>
-        </div>
+        <a href="https://www.light.gg/god-roll/roll-appraiser/" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <img src="https://www.light.gg/cdn-cgi/image/w=75,h=75/Content/Images/new-icon.png" />
+            <h2>Roll appraiser</h2>
+          </div>
 
-        <p>Analyze your rolls and compare them to the community average roll and community curated suggestions.</p>
-        <span>https://www.light.gg/god-roll/roll-appraiser/</span>
-      </a>
+          <p>Analyze your rolls and compare them to the community average roll and community curated suggestions.</p>
+          <span>https://www.light.gg/god-roll/roll-appraiser/</span>
+        </a>
 
-      <a href="https://destinyrecipes.com/checklist" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://destinyrecipes.com/assets/logo/logo.png" />
-          <h2>Pre-seasonal Checklist</h2>
-        </div>
+        <a href="https://destinyrecipes.com/checklist" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <img src="https://destinyrecipes.com/assets/logo/logo.png" />
+            <h2>Pre-seasonal Checklist</h2>
+          </div>
 
-        <p>Track your progress on the things that matter most for the upcoming season.</p>
-        <span>https://destinyrecipes.com/checklist</span>
-      </a>
+          <p>Track your progress on the things that matter most for the upcoming season.</p>
+          <span>https://destinyrecipes.com/checklist</span>
+        </a>
 
-      <a href="https://destinyrecipes.com/vault" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://destinyrecipes.com/assets/logo/logo.png" />
-          <h2>Vault Cleaner</h2>
-        </div>
+        <a href="https://destinyrecipes.com/vault" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <img src="https://destinyrecipes.com/assets/logo/logo.png" />
+            <h2>Vault Cleaner</h2>
+          </div>
 
-        <p>Clear space in your vault in less than 5 minutes thanks to this tool.</p>
-        <span>https://destinyrecipes.com/vault</span>
-      </a>
+          <p>Clear space in your vault in less than 5 minutes thanks to this tool.</p>
+          <span>https://destinyrecipes.com/vault</span>
+        </a>
 
-      <a href="https://destinytracker.com/destiny-2/db/insights" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://trackercdn.com/static-files/trackergg/production/dist/client/assets/6d718acb.png" />
-          <h2>PvP Meta Weapon Insights</h2>
-        </div>
+        <a href="https://destinytracker.com/destiny-2/db/insights" target="_blank" rel="noreferrer external"
+          class="card">
+          <div class="card-head">
+            <img src="https://trackercdn.com/static-files/trackergg/production/dist/client/assets/6d718acb.png" />
+            <h2>PvP Meta Weapon Insights</h2>
+          </div>
 
-        <p>Get an overview of the most used PvP weapons in the Crucible right now.</p>
-        <span>https://destinytracker.com/destiny-2/db/insights</span>
-      </a>
+          <p>Get an overview of the most used PvP weapons in the Crucible right now.</p>
+          <span>https://destinytracker.com/destiny-2/db/insights</span>
+        </a>
 
-      <a href="https://crucible.report" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://crucible.report/assets/favicon/apple-touch-icon.png" />
-          <h2>Crucible Stats</h2>
-        </div>
+        <a href="https://crucible.report" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <img src="https://crucible.report/assets/favicon/apple-touch-icon.png" />
+            <h2>Crucible Stats</h2>
+          </div>
 
-        <p>The prettiest way to see your and your opponents' Crucible stats.</p>
-        <span>https://crucible.report</span>
-      </a>
+          <p>The prettiest way to see your and your opponents' Crucible stats.</p>
+          <span>https://crucible.report</span>
+        </a>
 
-      <a href="https://trials.report" target="_blank" rel="noreferrer external" class="card">
-        <div class="card-head">
-          <img src="https://trials.report/assets/favicon/apple-touch-icon.png" />
-          <h2>Trials of Osiris Stats</h2>
-        </div>
+        <a href="https://trials.report" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <img src="https://trials.report/assets/favicon/apple-touch-icon.png" />
+            <h2>Trials of Osiris Stats</h2>
+          </div>
 
-        <p>The prettiest way to see your and your opponents' Trials stats.</p>
-        <span>https://trials.report</span>
-      </a>
+          <p>The prettiest way to see your and your opponents' Trials stats.</p>
+          <span>https://trials.report</span>
+        </a>
+      </div>
     </div>
 
-    <h1 style="margin-top: 24px;">Root of Nightmares</h1>
-    <p style="margin-bottom: 16px;">
-      <a target="_blank" style="color: white;" href="https://i.imgur.com/Tl1w4rK.jpeg">Cataclysm #1</a><br />
-      <a target="_blank" style="color: white;" href="https://i.imgur.com/P1dxxLy.jpeg">Scission #2</a><br />
-      <a target="_blank" style="color: white;" href="https://i.imgur.com/nIhkjxF.jpeg">Macrocosm #3</a><br />
-      <a target="_blank" style="color: white;" href="https://i.imgur.com/Q0o5sWn.jpeg">Nezarec #4</a><br />
-      <a target="_blank" style="color: white;" href="https://imgur.com/a/vXAv5WJ">All</a>
-    </p>
+    <div class="tab" x-show="tab === 'rootofnightmares'">
+      <h1>Maps</h1>
+
+      <div class="cards">
+        <a href="https://i.imgur.com/Tl1w4rK.jpeg" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <span>#1</span>
+            <h2>Cataclysm</h2>
+          </div>
+        </a>
+
+        <a href="https://i.imgur.com/P1dxxLy.jpeg" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <span>#2</span>
+            <h2>Scission</h2>
+          </div>
+        </a>
+
+        <a href="https://i.imgur.com/nIhkjxF.jpeg" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <span>#3</span>
+            <h2>Macrocosm</h2>
+          </div>
+        </a>
+
+        <a href="https://i.imgur.com/Q0o5sWn.jpeg" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <span>#4</span>
+            <h2>Nezarec</h2>
+          </div>
+        </a>
+
+        <a href="https://imgur.com/a/vXAv5WJ" target="_blank" rel="noreferrer external" class="card">
+          <div class="card-head">
+            <span>All</span>
+            <h2>All maps</h2>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>
