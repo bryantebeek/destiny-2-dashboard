@@ -1,6 +1,6 @@
 html, body {
-  height: 100%;
-  background-color: #A88E8B;
+  min-height: 100vh;
+  background-color: #101419;
 }
 
 body {
@@ -9,12 +9,10 @@ body {
   font-weight: 400;
   color: #f5f5f5;
 
-  background-color: #101419;
   background-image: url('/img/background.webp');
   /* background-image: url('https://pbs.twimg.com/media/Fa4ePbnVQAAcfjM?format=jpg&name=4096x4096'); */
   background-repeat: no-repeat;
   background-position: 89% top;
-  height: auto;
   background-size: 170% auto;
 }
 
@@ -45,7 +43,6 @@ p {
 }
 
 .navigation {
-  width: 100%;
   height: 50px;
   background-color: rgba(0 0 0 / 50%);
   display: grid;
@@ -53,8 +50,9 @@ p {
   text-transform: uppercase;
   font-size: 14px;
   align-items: center;
-  justify-content: center;
   grid-auto-flow: column;
+  overflow-x: auto;
+  padding: 0 8px;
 }
 
 .navigation button {
@@ -65,6 +63,7 @@ p {
   font-size: 14px;
   height: 50px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .navigation button:hover {
@@ -81,13 +80,19 @@ p {
 .content {
   position: relative;
   z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: auto 1fr auto;
 }
 
 .tab {
   display: grid;
   justify-items: center;
-  overflow: hidden;
+  align-items: start;
+  align-content: start;
   padding: 0 16px;
+  height: 100%;
 }
 
 .tab h1 {
@@ -163,6 +168,10 @@ p {
 }
 
 @media (min-width: 600px) { 
+  .navigation {
+    justify-content: center;
+  }
+  
   .cards {
     grid-template-columns: repeat(auto-fill, 400px);
     justify-content: center;
@@ -179,5 +188,5 @@ p {
 .footer p {
   color: rgba(255, 255, 255, 0.6);
   font-size: .8rem;
-  margin-top: 4px;
+  margin: 4px 0 24px;
 }
