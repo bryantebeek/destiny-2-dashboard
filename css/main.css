@@ -91,13 +91,13 @@ p {
 
 .navigation.subnavigation button:hover {
   cursor: pointer;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   margin-bottom: -2px;
 }
 
 .navigation.subnavigation button.active {
-  border-bottom: 1px solid white;
-  margin-bottom: -1px;
+  border-bottom: 2px solid white;
+  margin-bottom: -2px;
 }
 
 .content {
