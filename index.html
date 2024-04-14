@@ -145,12 +145,53 @@
       </div>
     </div>
 
-    <div class="tab" x-show="tab === 'dungeons'" x-data="{ subtab: 'warlordsruin' }">
+    <div class="tab" x-show="tab === 'dungeons'" x-data="{ subtab: 'ghostsofthedeep' }">
       <div class="navigation subnavigation">
+        <button x-on:click="subtab = 'ghostsofthedeep'" x-bind:class="subtab === 'ghostsofthedeep' ? 'active' : ''">
+          Ghosts of the Deep
+        </button>
+        
         <button x-on:click="subtab = 'warlordsruin'" x-bind:class="subtab === 'warlordsruin' ? 'active' : ''">
           Warlord's Ruin
         </button>
       </div>
+
+      <div class="tab-content" x-show="subtab === 'ghostsofthedeep'">
+        <h1>Maps</h1>
+
+        <p>Credits for all maps go to <strong>/u/pryanie</strong> on Reddit</p>
+
+        <div class="cards">
+          <a href="/img/ghosts-of-the-deep/ghosts-of-the-deep-1-clean.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#1</span>
+              <h2>The Ritual (clean)</h2>
+            </div>
+          </a>
+
+          <a href="/img/ghosts-of-the-deep/ghosts-of-the-deep-1-route.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#1</span>
+              <h2>The Ritual (route)</h2>
+            </div>
+          </a>
+
+          <a href="/img/ghosts-of-the-deep/ghosts-of-the-deep-2.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#2</span>
+              <h2>Ecthar, The Shield of Savathûn</h2>
+            </div>
+          </a>
+
+          <a href="/img/ghosts-of-the-deep/ghosts-of-the-deep-3.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#3</span>
+              <h2>Šimmumah Ur-Nokru</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+
 
       <div class="tab-content" x-show="subtab === 'warlordsruin'">
         <h1>Maps</h1>
@@ -187,27 +228,17 @@
           </a>
         </div>
       </div>
-      
-      <div class="tab-content" x-show="subtab === 'vowofthedisciple'">
-        <h1>Symbols</h1>
+    </div>
 
-        <p>Credits for the symbols overviews go to <strong>/u/itsnon</strong> and <strong>/u/nerdorado</strong> on Reddit</p>
-
-        <div class="cards">
-          <a href="/img/vow-of-the-disciple/symbols.png" target="_blank" rel="noreferrer external" class="card">
-            <div class="card-head">
-              <span>#</span>
-              <h2>Symbols</h2>
-            </div>
-          </a>
-
-          <a href="/img/vow-of-the-disciple/symbols-official.png" target="_blank" rel="noreferrer external" class="card">
-            <div class="card-head">
-              <span>#</span>
-              <h2>Symbols "official callouts"</h2>
-            </div>
-          </a>
-        </div>
+    <div class="tab" x-show="tab === 'dungeons'" x-data="{ subtab: 'warlordsruin' }">
+      <div class="navigation subnavigation">
+        <button x-on:click="subtab = 'ghostsofthedeep'" x-bind:class="subtab === 'ghostsofthedeep' ? 'active' : ''">
+          Ghosts of the Deep
+        </button>
+        
+        <button x-on:click="subtab = 'warlordsruin'" x-bind:class="subtab === 'warlordsruin' ? 'active' : ''">
+          Warlord's Ruin
+        </button>
       </div>
     </div>
 
