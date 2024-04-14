@@ -30,6 +30,10 @@
         Dashboard
       </button>
 
+      <button x-on:click="tab = 'dungeons'" x-bind:class="tab === 'dungeons' ? 'active' : ''">
+        Dungeons
+      </button>
+
       <button x-on:click="tab = 'raids'" x-bind:class="tab === 'raids' ? 'active' : ''">
         Raids
       </button>
@@ -141,6 +145,72 @@
       </div>
     </div>
 
+    <div class="tab" x-show="tab === 'dungeons'" x-data="{ subtab: 'warlordsruin' }">
+      <div class="navigation subnavigation">
+        <button x-on:click="subtab = 'warlordsruin'" x-bind:class="subtab === 'warlordsruin' ? 'active' : ''">
+          Warlord's Ruin
+        </button>
+      </div>
+
+      <div class="tab-content" x-show="subtab === 'warlordsruin'">
+        <h1>Maps</h1>
+
+        <p>Credits for all maps go to <strong>/u/pryanie</strong> on Reddit</p>
+
+        <div class="cards">
+          <a href="/img/warlords-ruin/warlords-ruin-1.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#1</span>
+              <h2>Rathil, First Broken Knight of Fikrul</h2>
+            </div>
+          </a>
+
+          <a href="/img/warlords-ruin/warlords-ruin-2.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#2</span>
+              <h2>Imprisoned</h2>
+            </div>
+          </a>
+
+          <a href="/img/warlords-ruin/warlords-ruin-3.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#3</span>
+              <h2>Locus of Wailing Grief</h2>
+            </div>
+          </a>
+
+          <a href="/img/warlords-ruin/warlords-ruin-4.jpeg" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#4</span>
+              <h2>Hefnd's Vengeance, Blighted Chimaera</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="tab-content" x-show="subtab === 'vowofthedisciple'">
+        <h1>Symbols</h1>
+
+        <p>Credits for the symbols overviews go to <strong>/u/itsnon</strong> and <strong>/u/nerdorado</strong> on Reddit</p>
+
+        <div class="cards">
+          <a href="/img/vow-of-the-disciple/symbols.png" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#</span>
+              <h2>Symbols</h2>
+            </div>
+          </a>
+
+          <a href="/img/vow-of-the-disciple/symbols-official.png" target="_blank" rel="noreferrer external" class="card">
+            <div class="card-head">
+              <span>#</span>
+              <h2>Symbols "official callouts"</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div class="tab" x-show="tab === 'raids'" x-data="{ subtab: 'rootofnightmares' }">
       <div class="navigation subnavigation">
         <button x-on:click="subtab = 'vowofthedisciple'" x-bind:class="subtab === 'vowofthedisciple' ? 'active' : ''">
@@ -183,13 +253,6 @@
             <div class="card-head">
               <span>#4</span>
               <h2>Nezarec</h2>
-            </div>
-          </a>
-
-          <a href="https://imgur.com/a/vXAv5WJ" target="_blank" rel="noreferrer external" class="card">
-            <div class="card-head">
-              <span>All</span>
-              <h2>All maps</h2>
             </div>
           </a>
         </div>
